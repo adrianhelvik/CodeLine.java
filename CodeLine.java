@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 /**
- * FIFO & LIFO linked list for lines of code, disregards whitespace-only lines and can check indentation of lines
+ * Linked list for handling lines of code, disregards whitespace-only lines and can check indentation of lines
  */
 public class CodeLine {
 
