@@ -11,7 +11,7 @@ public class CodeLine {
     private String content;
     private CodeLine prev;
     private CodeLine next;
-    private String indent =                     "    ";
+    private static String indent =              "    ";
 
     // Public setters
     public void setContent(String c)            { content = c; }
@@ -25,7 +25,7 @@ public class CodeLine {
     public CodeLine getPrev()                   { return prev; }
     public CodeLine getNext()                   { return next; }
     public CodeLine getFirst()                  { CodeLine cl = this; while (cl.getPrev() != null) cl = cl.getPrev(); return cl; }
- // public CodeLine getFirst()                  { if (getPrev != null) return getPrev.getFirst(); else return this; }
+ // public CodeLine getFirst()                  { if (getPrev() != null) return getPrev().getFirst(); else return this; }
     public CodeLine getLast()                   { CodeLine cl = this; while (cl.getNext() != null) cl = cl.getNext(); return cl; }
  // public CodeLine getLast()                   { if (getNext() != null) return getPrev().getLast(); else return this; }
     public int getIndentLevel()                 { return (content.length() - trimFront(content).length()) / indent.length(); }
